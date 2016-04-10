@@ -1,5 +1,14 @@
+# C
 *.o
 *.gch
 *.hex
 *.out
 tinytemp.out.map
+
+# Sublime
+*.sublime-*
+
+# Eagle
+*.b#*
+*.s#*
+*.job
