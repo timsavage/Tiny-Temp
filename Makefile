@@ -35,6 +35,7 @@ DEFINES = -DF_CPU=$(CLK_FREQ)
 override CFLAGS = -I. $(INCLUDES) -g -O$(OPTIMIZE) -mmcu=$(MCU) $(DEFINES) \
 		-Wall -Werror -std=gnu99 \
 		-fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections
+override CPPFLAGS = CFLAGS
 
 # Assembler
 override ASMFLAGS = -I. $(INCLUDES) -mmcu=$(MCU) $(DEFINES)
@@ -63,6 +64,7 @@ GDBINITFILE = gdbinit-$(PROJECTNAME)
 
 # Filter files by type
 CFILES = $(filter %.c, $(SRC))
+CPPFILES =  $(filter %.cpp, $(SRC))
 ASMFILES = $(filter %.S, $(SRC))
 
 # Generate list of object files
@@ -95,6 +97,9 @@ $(TRG): $(OBJS)
 # Generate object files
 %.c.o: src/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
+%.cpp.o: src/%.cpp
+	$(CC) $(CPPFLAGS) -c $< -o $@
 
 %.S.o: src/%.S
 	$(CC) $(ASMFLAGS) -c $< -o $@
