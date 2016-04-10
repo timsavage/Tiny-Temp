@@ -22,9 +22,9 @@ leaving one pin free.
 
 Note that in the schematic the 3.3 Volt regulator used is the LD33V the pin
 layout differs from the 78XX series in with:
-- Pin 1: GRN
-- Pin 2: OUT
-- Pin 3: IN
+ - Pin 1: GRN
+ - Pin 2: OUT
+ - Pin 3: IN
 
 The schematic uses a 78XX series symbol.
 
@@ -34,15 +34,15 @@ The ICSP header is optional and only really in place for convenience.
 BOM
 ---
 
-1x 	HP QDSP-6064 - 7 Segment "Bubble" display
-1x	ATTiny 85
-1x	TMP34 - Temperature sensor
-1x 	LD33V - 3.3V voltage regulator
-2x	74HC595 - Shift register
-4x	2N3904 - NPN transistor
-5x	10k ohm resistor
-4x	330 ohm resistor
-2x	0.1uF MLC cap
+ - 1x HP QDSP-6064 - 7 Segment "Bubble" display
+ - 1x	ATTiny 85
+ - 1x	TMP34 - Temperature sensor
+ - 1x LD33V - 3.3V voltage regulator
+ - 2x	74HC595 - Shift register
+ - 4x	2N3904 - NPN transistor
+ - 5x	10k ohm resistor
+ - 4x	330 ohm resistor
+ - 2x	0.1uF MLC cap
 
 
 Software
