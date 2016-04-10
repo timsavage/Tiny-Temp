@@ -57,10 +57,10 @@ inline void _shift_out(uint8_t val) {
 void display_update(void) {
   for (uint8_t r = 0; r < 4; r++) {
     // Clear latch
-    PORTB &= ~(1 << DISPLAY_LATCH_PIN);
+    PORTB &= ~_BV(DISPLAY_LATCH_PIN);
     _shift_out(1 << r);
     _shift_out((uint8_t)(display_buffer >> (r * 8)));
-    PORTB |= 1 << DISPLAY_LATCH_PIN;
+    PORTB |= _BV(DISPLAY_LATCH_PIN);
     _delay_ms(0.5);
   }
 }
