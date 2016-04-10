@@ -1,0 +1,5 @@
+*.o
+*.gch
+*.hex
+*.out
+tinytemp.out.map
